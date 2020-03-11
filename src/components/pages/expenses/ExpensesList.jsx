@@ -27,13 +27,13 @@ const ExpensesList = () => {
             <tr>
               <td width="33%" key={expense.id}>{expense.expenseName}</td>
               <td width="33%">{expense.typeName}</td>
-              <td width="33%">R$ {expense.expenseValue},00</td>
+              <td width="33%">R$ {expense.expenseValue.toLocaleString('pt-BR')}</td>
             </tr>
           ))}
           <tr>
             <td></td>
             <td>Total</td>
-            <td>R$ {sum},00</td>
+            <td>R$ {sum.toLocaleString('pt-BR')}</td>
           </tr>
         </tbody>
       </Table>
