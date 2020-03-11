@@ -20,7 +20,7 @@ const Expenses = () => {
     e.preventDefault()
 
     const userID = firebase.auth().currentUser.uid
-    console.log(userID)
+    //console.log(userID)
     const dateNow = new Date()
     const createAt = dateNow
     const updateAt = dateNow
@@ -29,7 +29,7 @@ const Expenses = () => {
     .firestore()
     .collection('dados/'+userID+'/expenses')
     .add({
-      startDate,
+      expenseDate: startDate.toLocaleDateString(),
       expenseName,
       typeName,
       expenseValue: parseFloat(expenseValue),

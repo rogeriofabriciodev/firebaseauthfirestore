@@ -17,6 +17,7 @@ const ExpensesList = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
+            <th>Data</th>
             <th>Despensa</th>
             <th>Tipo</th>
             <th>Valor</th>
@@ -25,12 +26,14 @@ const ExpensesList = () => {
         <tbody>
           {expenses.map((expense => 
             <tr>
-              <td width="33%" key={expense.id}>{expense.expenseName}</td>
-              <td width="33%">{expense.typeName}</td>
-              <td width="33%">R$ {expense.expenseValue.toLocaleString('pt-BR')}</td>
+              <td width="25%" key={expense.id}>{expense.expenseDate}</td>
+              <td width="25%">{expense.expenseName}</td>
+              <td width="25%">{expense.typeName}</td>
+              <td width="25%">R$ {expense.expenseValue.toLocaleString('pt-BR')}</td>
             </tr>
           ))}
           <tr>
+            <td></td>
             <td></td>
             <td>Total</td>
             <td>R$ {sum.toLocaleString('pt-BR')}</td>
