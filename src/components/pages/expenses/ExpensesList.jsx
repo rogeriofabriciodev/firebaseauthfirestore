@@ -7,6 +7,11 @@ const ExpensesList = () => {
   const [sortBy] = useState('NAME_ASC')
   const expenses = ExpensesConsult(sortBy)
 
+  //Sum the itens `expenseValue` of consult
+  var sum = expenses.reduce( function( prevVal, elem ) {
+    return prevVal + elem.expenseValue;
+    }, 0 );
+
   return (
     <div className="container mt-5 mb-5">
       <Table striped bordered hover size="sm">
@@ -22,13 +27,13 @@ const ExpensesList = () => {
             <tr>
               <td width="33%" key={expense.id}>{expense.expenseName}</td>
               <td width="33%">{expense.typeName}</td>
-              <td width="33%">{expense.expenseValue}</td>
+              <td width="33%">R$ {expense.expenseValue},00</td>
             </tr>
           ))}
           <tr>
             <td></td>
             <td>Total</td>
-            <td>R$</td>
+            <td>R$ {sum},00</td>
           </tr>
         </tbody>
       </Table>

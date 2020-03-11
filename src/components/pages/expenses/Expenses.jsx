@@ -11,7 +11,7 @@ const Expenses = () => {
 
   const [ expenseName, setExpenseName ] = useState('')
   const [ typeName, setTypeName ] = useState('')
-  const [ expenseValue, setExpenseValue ] = useState('')
+  const [ expenseValue, setExpenseValue ] = useState(0)
   
   function submitData(e) {
     e.preventDefault()
@@ -34,7 +34,7 @@ const Expenses = () => {
     }).then(() => {
       setExpenseName('')
       setTypeName('')
-      setExpenseValue('')
+      setExpenseValue(0)
     })
   }
 
@@ -72,9 +72,8 @@ const Expenses = () => {
               <Form.Label>Valor</Form.Label>
               <Form.Control 
                 type="number" 
-                placeholder="0.00" 
                 value={ expenseValue } 
-                onChange={ e => setExpenseValue(e.currentTarget.value) } />
+                onChange={ e => setExpenseValue(parseFloat(e.currentTarget.value)) } />
             </Form.Group>
             <Button variant="primary" type="submit">
               Salvar
