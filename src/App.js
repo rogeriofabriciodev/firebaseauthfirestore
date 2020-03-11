@@ -11,8 +11,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Dashboard from './components/dashboard/Dashboard'
 import MenuSignIn from './components/nav/MenuSignIn'
 import MenuSignOut from './components/nav/MenuSignOut'
-import Types from './components/pages/Types'
+import Types from './components/pages/types/Types'
+import TypesList from './components/pages/types/TypesList'
+import Expenses from './components/pages/expenses/Expenses'
+import ExpensesList from './components/pages/expenses/ExpensesList'
 import PageOne from './components/pages/PageOne'
+
 
 
 firebase.initializeApp({
@@ -56,6 +60,9 @@ componentDidMount = () => {
                 <MenuSignIn />
                 <Route exact path='/' component={Dashboard} />
                 <Route path='/addtypes' component={Types} />
+                <Route path='/listtypes' component={TypesList} />
+                <Route path='/addexpenses' component={Expenses} />
+                <Route path='/listexpenses' component={ExpensesList} />
                 <Route path='/pageone' component={PageOne} />
               </div>
             </Switch>

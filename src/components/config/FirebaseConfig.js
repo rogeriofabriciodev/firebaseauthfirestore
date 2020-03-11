@@ -3,14 +3,14 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 var firebaseConfig = {
-    apiKey: "AIzaSyCfeRvvRf6-Hw7eeamdvzpEbhnO8Vm_rso",
-    authDomain: "zapp-ac004.firebaseapp.com",
-    databaseURL: "https://zapp-ac004.firebaseio.com",
-    projectId: "zapp-ac004",
-    storageBucket: "zapp-ac004.appspot.com",
-    messagingSenderId: "1077277342809",
-    appId: "1:1077277342809:web:86287ba9a7547b01ca4548",
-    measurementId: "G-3B145FECWE"
+  apiKey: "AIzaSyCzfsrG9kMa3WMN8lQaWb-CVTSuMhiPSa4",
+  authDomain: "modelos-bd7ce.firebaseapp.com",
+  databaseURL: "https://modelos-bd7ce.firebaseio.com",
+  projectId: "modelos-bd7ce",
+  storageBucket: "modelos-bd7ce.appspot.com",
+  messagingSenderId: "62676934495",
+  appId: "1:62676934495:web:2e8b8e85f738ef7d53a0ea",
+  measurementId: "G-VJYLFD7BVY"
   };
 
   class Firebase {
